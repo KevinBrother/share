@@ -5,6 +5,7 @@ import FilterList1 from "./pages/Demo3/FilterList1";
 import FilterList2 from "./pages/Demo3/FilterList2";
 import Request from "./pages/Demo4/Request";
 import MoDelList from "./pages/Demo5-model";
+import NiceModalExample from "./pages/Demo6-model";
 
 const menuRouter = [
   {
@@ -30,6 +31,10 @@ const menuRouter = [
   {
     path: '/MoDelList',
     element: <MoDelList />
+  },
+  {
+    path: '/NiceModalExample',
+    element: <NiceModalExample />
   },
 ];
 
