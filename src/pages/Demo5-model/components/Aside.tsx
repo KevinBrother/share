@@ -5,7 +5,7 @@ export default function Aside({ setDisplay }: IDisplayProp) {
 
   return (
     <aside>
-      <button onClick={() => setDisplay('block')}>新增</button>
+      <button onClick={() => setDisplay(true)}>新增</button>
     </aside>
   )
 }

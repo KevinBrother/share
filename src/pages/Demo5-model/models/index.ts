@@ -1,8 +1,8 @@
 export interface IDisplayProp {
-  setDisplay: (value: string) => void;
+  setDisplay: (value: boolean) => void;
 }
 
 export interface IModelProp {
   display: string;
-  setDisplay: (value: string) => void;
+  setDisplay: (value: boolean) => void;
 }
