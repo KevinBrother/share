@@ -4,6 +4,7 @@ import HooksModel from "./pages/Demo1/HooksModel";
 import FilterList1 from "./pages/Demo3/FilterList1";
 import FilterList2 from "./pages/Demo3/FilterList2";
 import Request from "./pages/Demo4/Request";
+import MoDelList from "./pages/Demo5-model";
 
 const menuRouter = [
   {
@@ -27,8 +28,8 @@ const menuRouter = [
     element: <FilterList2 />
   },
   {
-    path: '/Request',
-    element: <Request />
+    path: '/MoDelList',
+    element: <MoDelList />
   },
 ];
 
