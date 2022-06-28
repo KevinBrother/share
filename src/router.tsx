@@ -1,10 +1,10 @@
-import ClassModel from "./pages/Demo1/ClassModel";
-import FunctionModel from "./pages/Demo1/FunctionModel";
-import HooksModel from "./pages/Demo1/HooksModel";
-import FilterList1 from "./pages/Demo3/FilterList1";
-import FilterList2 from "./pages/Demo3/FilterList2";
-import Request from "./pages/Demo4/Request";
-import MoDelList from "./pages/Demo5-model";
+import ClassModel from "./pages/01-class-function/ClassModel";
+import FunctionModel from "./pages/01-class-function/FunctionModel";
+import HooksModel from "./pages/01-class-function/HooksModel";
+import FilterList1 from "./pages/03-state/FilterList1";
+import FilterList2 from "./pages/03-state/FilterList2";
+import Request from "./pages/last/Request";
+import MoDelList from "./pages/04-components";
 
 const menuRouter = [
   {
