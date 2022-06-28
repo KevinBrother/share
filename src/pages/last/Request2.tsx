@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import { useEffect, useState } from 'react'
 import { getUserById } from '../02-lifecycle/utils';
 
@@ -31,7 +32,7 @@ export default function Request() {
         {loading ? 'loading...' : user.name}
       </div>
       {errorMsg ? errorMsg : ''}
-      <button onClick={() => setId(Math.random())}>获取其他的人</button>
+      <Button size="small" onClick={() => setId(Math.random())}>获取其他的人</Button>
     </div>
   )
 }

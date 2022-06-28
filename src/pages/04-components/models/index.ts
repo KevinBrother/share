@@ -3,6 +3,6 @@ export interface IDisplayProp {
 }
 
 export interface IModelProp {
-  display: string;
+  display: boolean;
   setDisplay: (value: boolean) => void;
 }

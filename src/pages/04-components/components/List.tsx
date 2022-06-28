@@ -23,10 +23,5 @@ export default function List({ setDisplay }: IDisplayProp) {
         </tr>
       </tbody>
     </table>
-
-    /*   <ul>
-        <li>章三 ：<Button onClick={() => setDisplay(true)}>编辑</Button></li>
-        <li>里斯 ：<Button onClick={() => setDisplay(true)}>编辑</Button></li>
-      </ul> */
   )
 }

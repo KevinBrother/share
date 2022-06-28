@@ -1,15 +1,15 @@
 
+import { Modal } from 'antd'
 import React from 'react'
 import { IModelProp } from '../models'
 
 export default function List({ display, setDisplay }: IModelProp) {
 
   return (
-    <div style={{ width: '100px', height: '100px', border: '1px solid black', display }}>
-      <header>
-        <button onClick={() => setDisplay(true)}>关闭</button>
-      </header>
-      dialog
-    </div>
+    <Modal title="Basic Modal" visible={display} onOk={() => setDisplay(false)} onCancel={() => setDisplay(false)}>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </Modal>
   )
 }
