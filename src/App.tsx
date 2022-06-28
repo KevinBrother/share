@@ -1,5 +1,4 @@
 import './App.css'
-import './styles/tailwind.css'
 import { useRoutes, Link } from 'react-router-dom';
 import { baseRouter, menuRouter } from './router';
 

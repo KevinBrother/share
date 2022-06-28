@@ -5,7 +5,7 @@ import { Button, Modal, Table } from 'antd';
 export default function List({ setDisplay }: IDisplayProp) {
 
   return (
-    <><div className="text-blue-500">TailwindCSS setup</div><table className="table-auto border border-collapse border-green-800">
+    <table className="table-auto border border-collapse border-green-800">
       <thead>
         <tr>
           <th>用户名</th>
@@ -22,7 +22,7 @@ export default function List({ setDisplay }: IDisplayProp) {
           <td className="border"><Button onClick={() => setDisplay(true)}>编辑</Button></td>
         </tr>
       </tbody>
-    </table></>
+    </table>
 
     /*   <ul>
         <li>章三 ：<Button onClick={() => setDisplay(true)}>编辑</Button></li>
