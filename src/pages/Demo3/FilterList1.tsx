@@ -18,7 +18,6 @@ function UserList({ users }: { users: IUser[] }) {
   return (
     <div>
       <input value={searchKey} onChange={handleSearch} />
-
       {filtered.map(user => <div key={user.name}>{user.name}</div>)}
     </div>
   )

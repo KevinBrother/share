@@ -5,9 +5,6 @@ export default function UseEffect({ id }: { id: number }) {
 
   useEffect(() => {
     getUserById({ id });
-    return () => {
-      console.log(111);
-    }
   }, [id])
 
   return (
