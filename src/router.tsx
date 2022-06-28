@@ -5,7 +5,8 @@ import FilterList1 from "./pages/Demo3/FilterList1";
 import FilterList2 from "./pages/Demo3/FilterList2";
 import Request from "./pages/Demo4/Request";
 import MoDelList from "./pages/Demo5-model";
-import NiceModalExample from "./pages/Demo6-model";
+import ReduxModal from "./pages/Demo6-model";
+import MobxModal from "./pages/Demo7-model";
 
 const menuRouter = [
   {
@@ -33,8 +34,12 @@ const menuRouter = [
     element: <MoDelList />
   },
   {
-    path: '/NiceModalExample',
-    element: <NiceModalExample />
+    path: '/ReduxModal',
+    element: <ReduxModal />
+  },
+  {
+    path: '/MobxModal',
+    element: <MobxModal />
   },
 ];
 

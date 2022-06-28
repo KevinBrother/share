@@ -979,6 +979,23 @@ minimist@^1.2.6:
   resolved "https://mirrors.tencent.com/npm/minimist/-/minimist-1.2.6.tgz"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
+mobx-react-lite@^3.4.0:
+  version "3.4.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/mobx-react-lite/-/mobx-react-lite-3.4.0.tgz#d59156a96889cdadad751e5e4dab95f28926dfff"
+  integrity sha512-bRuZp3C0itgLKHu/VNxi66DN/XVkQG7xtoBVWxpvC5FhAqbOCP21+nPhULjnzEqd7xBMybp6KwytdUpZKEgpIQ==
+
+mobx-react@^7.5.1:
+  version "7.5.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/mobx-react/-/mobx-react-7.5.1.tgz#2dbeb090025b75466fee5ea4092b45e268fbb10a"
+  integrity sha512-VNRpKBNpJEYER3XdkcY1PAr9zxFIaR2Ka6xwKFvySbEUC/uIITKt8rioVDqBdTc9pPzaYiCLw2dYpUOU85GQ5w==
+  dependencies:
+    mobx-react-lite "^3.4.0"
+
+mobx@^6.6.1:
+  version "6.6.1"
+  resolved "https://mirrors.tencent.com/npm/mobx/-/mobx-6.6.1.tgz#70ee6aa82f25aeb7e7d522bd621207434e509318"
+  integrity sha512-7su3UZv5JF+ohLr2opabjbUAERfXstMY+wiBtey8yNAPoB8H187RaQXuhFjNkH8aE4iHbDWnhDFZw0+5ic4nGQ==
+
 moment@^2.24.0, moment@^2.29.2:
   version "2.29.3"
   resolved "https://mirrors.tencent.com/npm/moment/-/moment-2.29.3.tgz#edd47411c322413999f7a5940d526de183c031f3"
