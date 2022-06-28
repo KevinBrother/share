@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { getUserById } from './utils';
 
-export default class LifeCycle extends Component<{ id: string }> {
+export default class LifeCycle extends Component<{ id: number }> {
   componentDidMount() {
     getUserById({ id: this.props.id });
   }
 
-  componentDidUpdate(prevProps: { id: string }) {
+  componentDidUpdate(prevProps: { id: number }) {
     if (prevProps.id !== this.props.id) {
       getUserById({ id: prevProps.id });
     }
