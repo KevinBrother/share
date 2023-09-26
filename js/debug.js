@@ -3,10 +3,6 @@ const { spawn } = require('child_process');
 const path = require('path');
 const { EOL } = require('os');
 
-const splitStr = (str) => {
-  return str.split(EOL);
-};
-
 class Debug {
   worker;
   breakpoints = {};
@@ -33,7 +29,7 @@ class Debug {
     });
 
     worker.stdout.on('error', (error) => {
-      cb(error);
+      cb(`pdb error: ${error}`);
     });
 
     this.worker = worker;
@@ -42,6 +38,10 @@ class Debug {
   sendToPDB(command) {
     // command 经过处理过后再给 PDB
     this.worker?.stdin?.write(command);
+  }
+
+  getLocalVars(name) {
+    this.worker?.stdin?.write(`locals()['${name}']\n`);
   }
 }
 

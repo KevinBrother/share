@@ -8,7 +8,10 @@ process.stdin.setEncoding('utf8');
 process.stdin.on('data', (data) => {
   // 处理输入流数据
   debug.sendToPDB(data);
-  // console.log('Received input:', data);
+  setTimeout(() => {
+    debug.getLocalVars('a');
+  }, 100);
+  console.log('Received input:', data);
 });
 
 process.stdin.on('end', () => {
