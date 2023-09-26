@@ -1,4 +1,4 @@
 # share
 
-[ ] debug
+[ ] share/debug
   pdb、adp相关
