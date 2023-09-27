@@ -1,5 +1,7 @@
 import sys
-def trace_dispatch( frame, event, arg):
+
+
+def trace_dispatch(frame, event, arg):
     """Dispatch a trace function for debugged frames based on the event.
 
     This function is installed as the trace function for debugged
@@ -25,10 +27,13 @@ def trace_dispatch( frame, event, arg):
     """
     # if self.quitting:
     #     return # None
+    print('frame.f_code: ' ,frame.f_code,'f_lineno: ', frame.f_lineno, '==========co_filename: ', frame.f_code.co_filename,
+          'co_name: ', frame.f_code.co_name,
+          'f_code.co_firstlineno: ', frame.f_code.co_firstlineno)
     if event == 'line':
         input()
         print('line')
-        print(frame, event, arg)
+        # print(frame, event, arg)
     elif event == 'call':
         print('call')
     elif event == 'return':
@@ -44,6 +49,7 @@ def trace_dispatch( frame, event, arg):
     else:
         print('bdb.Bdb.dispatch: unknown debugging event:', repr(event))
     return trace_dispatch
+
 
 sys.settrace(trace_dispatch)
 
