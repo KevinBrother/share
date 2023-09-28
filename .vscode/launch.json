@@ -5,6 +5,35 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "chrome",
+      "request": "launch",
+      "name": "webpack-dev test 2",
+      "url": "http://127.0.0.1:8080/src", // 浏览器启动访问的路径
+      "webRoot": "${workspaceFolder}", // 相对于工作区目录下目录寻找源文件
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///*": "*",
+        "webpack:///./~/*": "${webRoot}/node_modules/*",
+      },
+      "preLaunchTask": "dev" // task的label名称
+    },
+    {
+      "name": "webpack-dev test 1",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8081",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev - packages/webpack-debug"
+    },
+    {
+      "name": "webpack-debug ",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}",
+    },
+    {
       "name": "使用ts-node 调用ts",
       "type": "node",
       "request": "launch",
@@ -16,7 +45,6 @@
         "ts-node/register"
       ],
       "cwd": "${workspaceRoot}",
-      "protocol": "inspector",
       "internalConsoleOptions": "openOnSessionStart",
       // "program": "${workspaceFolder}/multi-type/ts-debug/index.ts"
     },
