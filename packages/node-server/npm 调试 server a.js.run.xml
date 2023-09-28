@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="npm 调试 server a.js" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/packages/node-server/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="a" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

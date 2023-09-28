@@ -5,6 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "node-server的调试方式",
+      "program": "${workspaceFolder}/packages/node-server/a.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
       "type": "chrome",
       "request": "launch",
       "name": "webpack-dev test 2",
