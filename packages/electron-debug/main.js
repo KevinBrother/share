@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 function createWindow() {
@@ -14,6 +14,8 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  ipcMain.on('set-title', handleSetTitle);
+
   createWindow();
 
   app.on('activate', () => {
@@ -28,3 +30,9 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
+
+function handleSetTitle(event, title) {
+  const webContents = event.sender;
+  const win = BrowserWindow.fromWebContents(webContents);
+  win.setTitle(title);
+}

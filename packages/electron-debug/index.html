@@ -8,7 +8,10 @@
   </head>
   <body>
     <h1>你好!</h1>
-    我们正在使用 Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, 和 Electron <span id="electron-version"></span>.
-    <script src="./renderer.js"></script>
+    Title: <input id="title" />
+    <p>我们正在使用 Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, 和 Electron</p>
+    <span id="electron-version"></span>.
+    <button id="btn">发送消息到主进程</button>
   </body>
+  <script src="./renderer.js"></script>
 </html>
