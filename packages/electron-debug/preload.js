@@ -12,5 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  setTitle: (title) => ipcRenderer.send('set-title', title)
+  setTitle: (title) => {
+    debugger
+    ipcRenderer.send('set-title', title)
+  }
 });

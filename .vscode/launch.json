@@ -5,6 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Electron Main",
+      "program": "${workspaceFolder}/packages/electron-debug/main.js",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
       "name": "node-server的调试方式 a.js",
       "program": "${workspaceFolder}/packages/node-server/a.js",
       "request": "launch",
