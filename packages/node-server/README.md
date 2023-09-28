@@ -2,22 +2,36 @@
 
 ## 结果
 
-- webstorm 可以参考 文件夹下的几个 xml 配置文件
+- WebStorm 可以参考 文件夹下的几个 xml 配置文件
 
 - vscode
   ```json
-      {
-          "name": "node-server的调试方式",
-          "program": "${workspaceFolder}/packages/node-server/a.js",
-          "request": "launch",
-          "skipFiles": [
-            "<node_internals>/**"
-          ],
-          "type": "node"
-      }
+  {
+    "name": "node-server的调试方式",
+    "program": "${workspaceFolder}/packages/node-server/a.js",
+    "request": "launch",
+    "skipFiles": ["<node_internals>/**"],
+    "type": "node"
+  }
   ```
 
-## 问题
+## 复合模式
 
-- 目前发现不能执行前置任务为服务，只能为脚本，猜测为服务时，他不知道何时结束
+- WebStorm
+- vscode 参考下面的配置
+
+```json
+  "compounds": [
+    {
+      "name": "Server/Client",
+      "configurations": [
+        "node-server的调试方式 a.js",
+        "node-server的调试方式 b.js",
+      ],
+      // "preLaunchTask": "${defaultBuildTask}",
+      "stopAll": true
+    }
+  ]
+```
+
 - 多服务调试可以尝试 docker-compose

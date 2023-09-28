@@ -5,8 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "node-server的调试方式",
+      "name": "node-server的调试方式 a.js",
       "program": "${workspaceFolder}/packages/node-server/a.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "node-server的调试方式 b.js",
+      "program": "${workspaceFolder}/packages/node-server/b.js",
       "request": "launch",
       "skipFiles": [
         "<node_internals>/**"
@@ -66,5 +75,16 @@
       ],
       "program": "${workspaceFolder}/js/index.js"
     },
+  ],
+  "compounds": [
+    {
+      "name": "Server/Client",
+      "configurations": [
+        "node-server的调试方式 a.js",
+        "node-server的调试方式 b.js",
+      ],
+      // "preLaunchTask": "${defaultBuildTask}",
+      "stopAll": true
+    }
   ]
 }
