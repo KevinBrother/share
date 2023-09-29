@@ -9,7 +9,7 @@
   ```json
   {
     "name": "Electron Main",
-    "program": "${workspaceFolder}/packages/electron-debug/main.js",
+    "program": "${workspaceFolder}/packages/electron-main-debug/main.js",
     "request": "launch",
     "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
     "skipFiles": ["<node_internals>/**"],
