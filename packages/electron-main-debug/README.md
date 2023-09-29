@@ -20,3 +20,13 @@
 - WebStorm
   查看 xml 文件
   [electron-main.run.xml](electron-main.run.xml)
+
+## electron 主进程热更新
+
+- electron-reloader
+  能生效，但是重启不会进入 debug 模式
+
+## doc
+
+https://cloud.tencent.com/developer/article/1880267
+https://www.jianshu.com/p/7ae7dfff8ed8

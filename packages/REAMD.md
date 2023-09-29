@@ -8,3 +8,7 @@
 
 https://www.cnblogs.com/konglxblog/p/17112548.html
 https://blog.csdn.net/shentian885/article/details/123896536
+
+## 问题
+
+1. 貌似不能通过命令行启动 debug 模式，必须 f5

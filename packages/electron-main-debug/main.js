@@ -1,6 +1,15 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
+const isDevelopment = !app.isPackaged;
+if (isDevelopment) {
+  try {
+    require('electron-reloader')(module);
+  } catch (err) {
+    console.log('err :>> ', err);
+  }
+}
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 800,
@@ -34,5 +43,6 @@ app.on('window-all-closed', () => {
 function handleSetTitle(event, title) {
   const webContents = event.sender;
   const win = BrowserWindow.fromWebContents(webContents);
+  title += 121323;
   win.setTitle(title);
 }

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "https://registry.npmjs.org/electron/-/electron-18.3.6.tgz#33739f44cb0a74e45c3efd879485af53c7c531c5"
+    "electron": "https://registry.npmjs.org/electron/-/electron-18.3.6.tgz#33739f44cb0a74e45c3efd879485af53c7c531c5",
+    "electron-reloader": "^1.2.3"
   }
 }
