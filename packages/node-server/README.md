@@ -29,7 +29,7 @@
         "node-server的调试方式 b.js",
       ],
       // "preLaunchTask": "${defaultBuildTask}",
-      "stopAll": true
+      // "stopAll": true //  停一个都会停止
     }
   ]
 ```

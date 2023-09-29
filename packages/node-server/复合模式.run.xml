@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="复合？？" type="CompoundRunConfigurationType">
+  <configuration default="false" name="复合模式" type="CompoundRunConfigurationType">
     <toRun name="node 调试 server a.js" type="NodeJSConfigurationType" />
     <toRun name="node 调试 server b.js" type="NodeJSConfigurationType" />
     <method v="2" />
