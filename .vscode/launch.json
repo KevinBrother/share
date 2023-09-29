@@ -5,6 +5,26 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "open chrome listen 8081",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8081",
+    },
+    {
+      "name": "open webpack-dev-server",
+      "request": "",
+      "type": "node",
+      // "program": "${workspaceFolder}/packages//main.js",
+    },
+    // 使用 node 的 launch 触发 task
+    {
+      "name": "touch webpack-dev-server task",
+      "request": "launch",
+      "type": "node",
+      // "program": "${workspaceFolder}/packages//main.js",
+    },
+    // electron main 主进程调试
+    {
       "name": "Electron Main",
       "program": "${workspaceFolder}/packages/electron-main-debug/main.js",
       "request": "launch",
@@ -14,6 +34,43 @@
       ],
       "type": "node"
     },
+    // 调试指定端口和域名，
+    // 不是很好用需要先 打 debugger 找到指定的可调试代码
+    // 这个功能 WebStorm 好用，
+    {
+      "name": "webpack-debug ",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8081",
+      "webRoot": "${workspaceFolder}",
+    },
+    // 调试 ts 单文件
+    {
+      "name": "使用ts-node 调用ts",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${relativeFile}"
+      ],
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      // "program": "${workspaceFolder}/multi-type/ts-debug/index.ts"
+    },
+    // 调试 js 单文件，适合直接调试某个 js 入口文件，也可以使用“插件”，右键debug
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "直接使用node 调用js",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/js/index.js"
+    },
+    // 调试 js 的服务
     {
       "name": "node-server的调试方式 a.js",
       "program": "${workspaceFolder}/packages/node-server/a.js",
@@ -32,48 +89,8 @@
       ],
       "type": "node"
     },
-    /* 
-      // 无效
-    {
-      "name": "webpack-dev test 1",
-      "request": "launch",
-      "type": "chrome",
-      "url": "http://localhost:8081",
-      "webRoot": "${workspaceFolder}",
-      "preLaunchTask": "npm: dev - packages/webpack-debug"
-    }, */
-    {
-      "name": "webpack-debug ",
-      "request": "launch",
-      "type": "chrome",
-      "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}",
-    },
-    {
-      "name": "使用ts-node 调用ts",
-      "type": "node",
-      "request": "launch",
-      "args": [
-        "${relativeFile}"
-      ],
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "cwd": "${workspaceRoot}",
-      "internalConsoleOptions": "openOnSessionStart",
-      // "program": "${workspaceFolder}/multi-type/ts-debug/index.ts"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "直接使用node 调用js",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}/js/index.js"
-    },
   ],
+  // 复合模式，适合需要启多个调试环境
   "compounds": [
     {
       "name": "Server/Client",
