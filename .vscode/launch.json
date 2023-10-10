@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "command": "npm run dev:main",
+      "name": " 可以直接调试 ts 源文件 strong Launch via NPM ",
+      "request": "launch",
+      "cwd": "${workspaceRoot}/packages/electron-webpack-ts-debug",
+      "type": "node-terminal"
+    },
+    {
       "name": "Launch via NPM",
       "request": "launch",
       "runtimeArgs": [
