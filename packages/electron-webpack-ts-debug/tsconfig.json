@@ -10,8 +10,7 @@
       }
     },
     
-    "include": [
-      "src/**/*",
-      "global.d.ts"
+    "files": [
+      "src/main.ts",
     ]
   }
