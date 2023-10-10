@@ -5,6 +5,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch via NPM",
+      "request": "launch",
+      "runtimeArgs": [
+        "run",
+        "dev:main"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "cwd": "${workspaceRoot}/packages/electron-webpack-ts-debug",
+      "type": "node"
+    },
+    {
       "name": "open chrome listen 8081",
       "request": "launch",
       "type": "chrome",
