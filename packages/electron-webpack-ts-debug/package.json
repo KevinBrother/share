@@ -1,0 +1,18 @@
+{
+  "name": "electron-webpack-ts-debug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "watch": "tsc -w",
+    "dev": "npm run build && electron ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "https://registry.npmjs.org/electron/-/electron-18.3.6.tgz#33739f44cb0a74e45c3efd879485af53c7c531c5",
+    "typescript": "^4.8.3"
+  }
+}
