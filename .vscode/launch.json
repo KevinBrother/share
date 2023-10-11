@@ -44,9 +44,9 @@
       "type": "node",
       // "program": "${workspaceFolder}/packages//main.js",
     },
-    // electron main 主进程调试
+    // electron main 主进程调试1， 通过
     {
-      "name": "Electron Main",
+      "name": "Electron Main 1，通过 node_modules 的 electron",
       "program": "${workspaceFolder}/packages/electron-main-debug/main.js",
       "request": "launch",
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
@@ -54,6 +54,15 @@
         "<node_internals>/**"
       ],
       "type": "node"
+    },
+    
+    // electron main 主进程调试2
+    {
+      "name": "Electron Main2 通过 npm 执行",
+      "command": "npm run dev",
+      "request": "launch",
+      "cwd": "${workspaceRoot}/packages/electron-main-debug",
+      "type": "node-terminal"
     },
     // 调试指定端口和域名，
     // 不是很好用需要先 打 debugger 找到指定的可调试代码
