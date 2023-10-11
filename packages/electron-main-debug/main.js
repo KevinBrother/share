@@ -19,11 +19,6 @@ function createWindow() {
     }
   });
 
-  // 加载 Chrome 浏览器并开启调试模式
-  win.loadURL('chrome://inspect', { userAgent: 'Chrome' });
-
-  app.commandLine.appendSwitch('remote-debugging-port', '9222'); // 设置调试端口
-
   win.on('closed', () => {
     mainWindow = null;
   });

@@ -9,7 +9,7 @@
       "name": " 可以直接调试 ts 源文件 strong Launch via NPM ",
       "request": "launch",
       "cwd": "${workspaceRoot}/packages/electron-webpack-ts-debug",
-      "type": "node-terminal"
+      "type": "node-terminal",
     },
     {
       "name": "Launch via NPM",
@@ -55,7 +55,6 @@
       ],
       "type": "node"
     },
-    
     // electron main 主进程调试2
     {
       "name": "Electron Main2 通过 npm 执行",
@@ -64,6 +63,15 @@
       "cwd": "${workspaceRoot}/packages/electron-main-debug",
       "type": "node-terminal"
     },
+    // 通过 remote-debuggin-port 在vscode 中调试 渲染进程
+    {
+      "name": "electron-main-debug 项目的 Electron Renderer",
+      "request": "attach",
+      "type": "chrome",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}"
+    },
+    
     // 调试指定端口和域名，
     // 不是很好用需要先 打 debugger 找到指定的可调试代码
     // 这个功能 WebStorm 好用，
