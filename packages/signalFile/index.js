@@ -7,4 +7,6 @@ function abc(c) {
 console.log('signalFile index.js fruits', fruits)
 const b = abc(a);
 
+document.write(b)
+
 console.log('signalFile index.js b', b)

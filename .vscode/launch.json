@@ -56,6 +56,16 @@
       ],
       "program": "${workspaceFolder}/packages/ts-debug/index.ts"
     },
+      // 调试 静态 html 中引入的 js文件
+      {
+      "type": "chrome",
+      "request": "launch",
+      "name": "调试 静态 html 中引入的 js文件",
+      "file": "${workspaceFolder}/packages/signalFile/index.html"
+    },
+
+// -=======
+
     {
       "command": "npm run dev:main",
       "name": " 可以直接调试 ts 源文件 strong Launch via NPM ",
