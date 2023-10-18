@@ -36,14 +36,25 @@
     },
     // 调试 ts 项目
     {
-      "name": "ts-debug",
+      "name": "编译后调试 ts 项目",
       "request": "launch",
       "type": "node",
       "program": "${workspaceFolder}/packages/ts-debug/index.ts",
       "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": [
-        "${workspaceFolder}/packages/ts-debug/**/*.js"
-      ]
+    },
+    {
+      "name": "使用ts-node 调用ts",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**/**/*"
+      ],
+      "program": "${workspaceFolder}/packages/ts-debug/index.ts"
     },
     {
       "command": "npm run dev:main",
@@ -122,21 +133,6 @@
       "type": "chrome",
       "url": "http://localhost:8081",
       "webRoot": "${workspaceFolder}",
-    },
-    // 调试 ts 单文件
-    {
-      "name": "使用ts-node 调用ts",
-      "type": "node",
-      "request": "launch",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**/**/*"
-      ],
-      "program": "${workspaceFolder}/packages/ts-debug/index.ts"
     },
     // 复合模式的 第个人调试方式
     {

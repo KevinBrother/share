@@ -1,13 +1,11 @@
 {
 	"version": "2.0.0",
 	"tasks": [
+		// 编译ts 文件
 		{
-			"type": "npm",
-			"script": "dev",
-			"path": "packages/webpack-debug",
-			"problemMatcher": [],
-			"label": "npm: dev - packages/webpack-debug",
-			"detail": "webpack server",
+			"type": "typescript",
+			"tsconfig": "packages/ts-debug/tsconfig.json",
+			"label": "tsc: build - tsconfig.json",
 		},
 	]
 }
