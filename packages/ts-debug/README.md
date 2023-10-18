@@ -27,10 +27,7 @@ node -r ts-node/register xxx.ts
         "-r",
         "ts-node/register"
       ],
-      "cwd": "${workspaceRoot}",
-      "protocol": "inspector",
-      "internalConsoleOptions": "openOnSessionStart",
-      // "program": "${workspaceFolder}/multi-type/ts-debug/index.ts"
+      "program": "${workspaceFolder}/packages/ts-debug/index.ts"
     }
   ]
 ```

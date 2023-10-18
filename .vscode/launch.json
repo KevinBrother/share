@@ -87,26 +87,28 @@
       "name": "使用ts-node 调用ts",
       "type": "node",
       "request": "launch",
-      "args": [
-        "${relativeFile}"
-      ],
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
-      "cwd": "${workspaceRoot}",
-      "internalConsoleOptions": "openOnSessionStart",
-      // "program": "${workspaceFolder}/multi-type/ts-debug/index.ts"
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**/**/*"
+      ],
+      "program": "${workspaceFolder}/packages/ts-debug/index.ts"
     },
     // 调试 js 单文件，适合直接调试某个 js 入口文件，也可以使用“插件”，右键debug
     {
       "type": "node",
       "request": "launch",
       "name": "直接使用node 调用js",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
       "program": "${workspaceFolder}/js/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "直接使用node 调用js2",
+      "program": "${workspaceFolder}/packages/signalFile/index.js"
     },
     // 调试 js 的服务
     {
