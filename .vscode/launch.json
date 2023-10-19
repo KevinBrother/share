@@ -52,7 +52,7 @@
       ],
       "skipFiles": [
         "<node_internals>/**",
-        "node_modules/**/**/*"
+        "${workspaceRoot}/node_modules/**/*.js",
       ],
       "program": "${workspaceFolder}/packages/ts-debug/index.ts"
     },
