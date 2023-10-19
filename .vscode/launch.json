@@ -3,7 +3,7 @@
   // 悬停以查看现有属性的描述。
   // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
-  "configurations": [  
+  "configurations": [      
     // 调试 js 单文件，适合直接调试某个 js 入口文件，也可以使用“插件”，右键debug
     {
       "type": "node",
@@ -64,8 +64,42 @@
       "file": "${workspaceFolder}/packages/signalFile/index.html"
     },
 
-// -=======
+    // ======= electron ==========
+     // electron main 主进程与渲染进程 调试1
+     {
+      "name": "Electron Main 1，通过 node_modules 的 electron",
+      "program": "${workspaceFolder}/packages/electron-main-debug/main.js",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+    },
 
+    // lectron main 主进程与渲染进程 调试2
+    {
+      "name": "Electron Main 2，通过 scripts 的dev",
+      "cwd": "${workspaceFolder}/packages/electron-main-debug",
+      "request": "launch",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [
+        "dev"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
     {
       "command": "npm run dev:main",
       "name": " 可以直接调试 ts 源文件 strong Launch via NPM ",
@@ -87,63 +121,7 @@
       "cwd": "${workspaceRoot}/packages/electron-webpack-ts-debug",
       "type": "node"
     },
-    {
-      "name": "open chrome listen 8081",
-      "request": "launch",
-      "type": "chrome",
-      "url": "http://localhost:8081",
-    },
-    {
-      "name": "open webpack-dev-server",
-      "request": "",
-      "type": "node",
-      // "program": "${workspaceFolder}/packages//main.js",
-    },
-    // 使用 node 的 launch 触发 task
-    {
-      "name": "touch webpack-dev-server task",
-      "request": "launch",
-      "type": "node",
-      // "program": "${workspaceFolder}/packages//main.js",
-    },
-    // electron main 主进程调试1， 通过
-    {
-      "name": "Electron Main 1，通过 node_modules 的 electron",
-      "program": "${workspaceFolder}/packages/electron-main-debug/main.js",
-      "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "type": "node"
-    },
-    // electron main 主进程调试2
-    {
-      "name": "Electron Main2 通过 npm 执行",
-      "command": "npm run dev",
-      "request": "launch",
-      "cwd": "${workspaceRoot}/packages/electron-main-debug",
-      "type": "node-terminal"
-    },
-    // 通过 remote-debuggin-port 在vscode 中调试 渲染进程
-    {
-      "name": "electron-main-debug 项目的 Electron Renderer",
-      "request": "attach",
-      "type": "chrome",
-      "port": 9222,
-      "webRoot": "${workspaceFolder}"
-    },
-    
-    // 调试指定端口和域名，
-    // 不是很好用需要先 打 debugger 找到指定的可调试代码
-    // 这个功能 WebStorm 好用，
-    {
-      "name": "webpack-debug ",
-      "request": "launch",
-      "type": "chrome",
-      "url": "http://localhost:8081",
-      "webRoot": "${workspaceFolder}",
-    },
+
     // 复合模式的 第个人调试方式
     {
       "name": "node-server的调试方式 b.js",

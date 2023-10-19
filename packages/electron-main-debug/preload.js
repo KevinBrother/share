@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 contextBridge.exposeInMainWorld('electronAPI', {
   setTitle: (title) => {
-    debugger
     ipcRenderer.send('set-title', title)
   }
 });
