@@ -12,3 +12,7 @@ https://blog.csdn.net/shentian885/article/details/123896536
 ## 问题
 
 1. 貌似不能通过命令行启动 debug 模式，必须 f5
+
+## 参考文档
+
+https://vscode-debug-specs.github.io/javascript_electron/#basic
