@@ -16,6 +16,7 @@
     "typescript": "^5.2.2"
   },
   "workspaces": [
-    "packages/*"
+    "debug-share/*",
+    "webpack-share"
   ]
 }
