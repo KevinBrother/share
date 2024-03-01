@@ -22,11 +22,11 @@ module.exports = {
         oneOf: [
           {
             test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader']
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
           },
           {
             test: /\.less$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
           },
           {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
