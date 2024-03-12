@@ -8,10 +8,3 @@ function setRem() {
 window.onresize = function () {
     setRem()
 }
-
-
-
-function setRem2() {
-    var deviceWidth=document.documentElement.clientWidth;
-    document.documentElement.style.fontSize =deviceWidth / bodyRemWidth + 'px';
-}

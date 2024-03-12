@@ -15,7 +15,14 @@
 
 ### px 转 rem
 
-> 获取html 元素的 font-size
+#### 例题
+>
+> 已知 总宽度为 750px，元素375px， 求当前元素为多少rem？
+>> 把总宽度分为 10 份，每一份为 1rem，则 1rem = 75px; 
+>> 当前元素 [y]rem = 375 / 75。 则y = 5。 （ 375 /（750 * 10））
+
+
+#### 获取html 元素的 font-size
 
 ``` javascript
     window.getComputedStyle(document.documentElement).getPropertyValue('font-size')

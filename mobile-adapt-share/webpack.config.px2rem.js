@@ -8,7 +8,7 @@ const isDevelopment = process.env.NODE_ENV !== "production";
 const px2remLoader = {
   loader: "px2rem-loader",
   options: {
-    remUnit: 75,
+    remUnit: 75, // 75px = 1rem
     remPrecision: 8,
   },
 };
