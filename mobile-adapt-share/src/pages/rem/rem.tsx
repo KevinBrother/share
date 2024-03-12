@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './global.less';
-import { Foo } from './pages'
+import '@src/reset.css';
+
+import { Foo } from './Index'
 
 
 const root = createRoot(document.getElementById('root'));

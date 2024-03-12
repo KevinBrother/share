@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack server"
+    "rem": "webpack server --config ./webpack.config.px2rem.js",
+    "vw": "webpack server --config ./webpack.config.px2vw.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,8 @@
     "less": "^4.1.2",
     "less-loader": "^11.0.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "px2rem-loader": "^0.1.9",
     "react-refresh": "^0.14.0",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.1",
