@@ -5,7 +5,6 @@ import '@assert/img.less';
 import './index.less'
 
 export function Foo() {
-
   return (
     <>
     <div style={{width: '375px', background: 'skyblue'}}> inner css </div>

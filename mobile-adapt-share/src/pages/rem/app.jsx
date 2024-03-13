@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import '@src/reset.css';
 
-import { Foo } from './Index'
+import { Foo } from './index.jsx'
 
 
 const root = createRoot(document.getElementById('root'));

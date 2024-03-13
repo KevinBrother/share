@@ -15,13 +15,15 @@ const px2remLoader = {
 
 module.exports = {
   mode: isDevelopment ? "development" : "production",
+  devtool: 'source-map',
   devServer: {
     static: false,
     port: 8000,
     open: true,
   },
   entry: {
-    index: "./src/pages/vw/vw.tsx",
+    index: "./src/pages/rem/app.jsx",
+    // remScript: "./src/pages/rem",
   },
   output: {
     clean: true,
@@ -45,8 +47,8 @@ module.exports = {
               MiniCssExtractPlugin.loader,
               "css-loader",
               "postcss-loader",
-              "less-loader",
               px2remLoader,
+              "less-loader",
             ],
           },
           {
@@ -83,7 +85,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./src/pages/rem/index.html",
     }),
     new MiniCssExtractPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),

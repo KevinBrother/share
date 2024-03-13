@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "rem": "webpack server --config ./webpack.config.px2rem.js",
+    "build:rem": "webpack --config ./webpack.config.px2rem.js",
     "vw": "webpack server --config ./webpack.config.px2vw.js"
   },
   "keywords": [],

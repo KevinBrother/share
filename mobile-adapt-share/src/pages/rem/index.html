@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      setRem()
+
+      function setRem() {
+          const htmlFontSize = document.documentElement.clientWidth / 20
+          document.documentElement.style.fontSize = htmlFontSize + 'px'
+      }
+      // 改变窗口大小时重新设置 rem
+      window.onresize = function () {
+          console.log('onresize');
+          setRem()
+      }
+    </script>
+  </body>
+</html>

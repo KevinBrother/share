@@ -45,8 +45,9 @@ module.exports = {
     port: 8001,
     open: true,
   },
+  devtool: 'source-map',
   entry: {
-    index: "./src/pages/vw/vw.tsx",
+    index: "./src/pages/vw/app.jsx",
   },
   output: {
     clean: true,
