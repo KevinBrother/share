@@ -5,10 +5,10 @@
  * @param {*} part 20
  * @returns 
  */
-function genRem(designSize = 750) {
+function genRem(designSize = 750, precision = 6) {
     document.documentElement.style.fontSize = document.documentElement.clientWidth + 'px';
     return function (px) {  
-        return px / designSize;
+        return (px / designSize).toFixed(6);
     }
 }
 
