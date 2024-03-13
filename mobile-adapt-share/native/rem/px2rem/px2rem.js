@@ -1,8 +1,9 @@
 
 /**
  * 
- * @param {*} totalWidth  750
- * @param {*} part 20
+ * @param {*} designSize 
+ * @param {*} precision 
+ * @param {*} part 
  * @returns 
  */
 function genRem(designSize = 750, precision = 6, part = 20) {
