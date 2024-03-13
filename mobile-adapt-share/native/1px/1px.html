@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        .border-1px:before {
+          transform: scaleY(0.5);
+        }
+      }
+      @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+        .border-1px:before {
+          transform: scaleY(0.33);
+        }
+      }
+
+      .one {
+        border-top: 1px solid #000;
+      }
+
+      .zero-five {
+        border-top: 0.5px solid #000;
+      }
+
+      .border-1px {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 1px;
+          width: 100%;
+          background-color: #000;
+          transform-origin: 50% 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure>
+      1px
+      <div class="one"></div>
+    </figure>
+    <figure>
+      0.5px
+      <div class="zero-five"></div>
+    </figure>
+    <figure>
+      transform 1px
+      <div class="border-1px"></div>
+    </figure>
+  </body>
+</html>

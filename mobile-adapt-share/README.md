@@ -17,7 +17,9 @@
 缺点：不同分辨率的屏幕计算转换太复杂，媒体查询不能兼顾所有的尺寸
 优点：简单，浏览器实现
 
-### px 转 rem
+### rem
+
+rem = “The font size of the root element”
 
 #### 例题
 >
@@ -31,10 +33,25 @@
     window.getComputedStyle(document.documentElement).getPropertyValue('font-size')
 ```
 
-### px 转 vm
+### vm
+
+   1vw ＝ 1/100th viewport width
+
+   缺点： 兼容性
+
+#### px2vm
 
 postcss-px-to-viewport的缺点, 就是只对style内的样式进行转换，行内样式没办法转换
+
+## 移动端屏幕相关概念
+>
+> dpr
+>> 1px 实现
 
 ## 参考文档
 
 [移动端适配 px2rem/px2vw 的原理与实现](https://segmentfault.com/a/1190000015619303)
+
+[移动端手机屏幕与设计稿大小的关系](https://zhuanlan.zhihu.com/p/597225296)
+
+[如何解决移动端 Retina 屏 1px 像素问题](https://github.com/sisterAn/blog/issues/117)
