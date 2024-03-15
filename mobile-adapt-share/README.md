@@ -77,6 +77,8 @@ postcss-px-to-viewport的缺点, 就是只对style内的样式进行转换，行
 
 [如何解决移动端 Retina 屏 1px 像素问题](https://github.com/sisterAn/blog/issues/117)
 
+[物理像素、逻辑像素、CSS像素、PPI、设备像素比是什么](https://zhuanlan.zhihu.com/p/337202411)
+
 [视口 Viewport](https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport)
 
 [理解设备像素、设备独立像素和css像素](https://juejin.cn/post/7042597141528707102)
