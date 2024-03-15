@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../src/reset.css">
+    <script src="./vw.js"></script>
+    <style >
+        div {
+            border: 1px dashed black;
+        }
+
+        /* .class-style {
+            width: 375px;
+        } */
+    </style>
+</head>
+<body>
+    <div id="outer"> inner css </div>
+    <!-- <div class="class-style"> class style </div> -->
+    <img id="img" style="width: 50vw;" src='../../src/assert/img.png' alt="" />
+
+    <script>
+        // const px2vw = resetPx2vw(750)
+
+        document.querySelector('#outer').style.width =  px2vw(375);
+        document.querySelector('#img').style.width =  px2vw(100);
+
+    </script>
+</body>
+</html>

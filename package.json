@@ -17,6 +17,7 @@
   },
   "workspaces": [
     "debug-share/*",
-    "webpack-share"
+    "webpack-share",
+    "mobile-adapt-share"
   ]
 }

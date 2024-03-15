@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../src/reset.css">
+    <script src="./px2rem.js"></script>
+    <style >
+        div {
+            border: 1px dashed black;
+            /* font-size: 16px; */
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 50%" >50%</div>
+    <div class="class-style">  class style </div>
+    <img class="class-img" src='../../../src/assert/img.png' alt="" />
+
+    <script>
+
+        document.querySelector('#outer').style.width =  pxToRem(375);
+        document.querySelector('#img').style.width =  pxToRem(100);
+
+    </script>
+</body>
+</html>
