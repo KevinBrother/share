@@ -6,20 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="../../src/reset.css">
-    <script src="./rem.js"></script>
+    <script src="./vw.js"></script>
     <style >
         div {
             border: 1px dashed black;
         }
 
-        .class-style {
-            width: 10rem;
-        }
+        /* .class-style {
+            width: 375px;
+        } */
     </style>
 </head>
 <body>
-    <div style="width: 10rem;"> inner css </div>
-    <div class="class-style">  class style </div>
-    <img style="width: 10rem;" src='../../src/assert/img.png' alt="" />
+    <div id="outer"> inner css </div>
+    <!-- <div class="class-style"> class style </div> -->
+    <img id="img" style="width: 50vw;" src='../../src/assert/img.png' alt="" />
+
+    <script>
+        // const px2vw = resetPx2vw(750)
+
+        document.querySelector('#outer').style.width =  px2vw(375);
+        document.querySelector('#img').style.width =  px2vw(100);
+
+    </script>
 </body>
 </html>

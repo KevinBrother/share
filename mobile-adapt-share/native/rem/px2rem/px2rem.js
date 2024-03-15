@@ -23,6 +23,15 @@ window.onresize = function () {
 }
 
 
+// function pxToRem(pxValue) {
+//     // 获取根元素的字体大小（以像素为单位）
+//     const rootFontSize = '16px';
+//     document.documentElement.style.fontSize = rootFontSize;
+//     // 将px值转换为rem单位
+//     const remValue = pxValue / rootFontSize;
+//     return remValue + 'rem';
+//   }
+
 
 
 // function a() {

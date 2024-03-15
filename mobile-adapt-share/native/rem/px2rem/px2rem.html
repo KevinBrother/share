@@ -20,12 +20,10 @@
     <img class="class-img" src='../../../src/assert/img.png' alt="" />
 
     <script>
-        const rem = px2rem(375);
-        const divElement = document.querySelector('.class-style');
-        divElement.style.width = rem + 'rem';
 
-        const imgElement = document.querySelector('.class-img');
-        imgElement.style.width = rem + 'rem';
+        document.querySelector('#outer').style.width =  pxToRem(375);
+        document.querySelector('#img').style.width =  pxToRem(100);
+
     </script>
 </body>
 </html>
